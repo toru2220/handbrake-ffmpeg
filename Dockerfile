@@ -7,7 +7,7 @@ RUN 	echo 'deb http://ppa.launchpad.net/stebbins/handbrake-releases/ubuntu xenia
 	apt-get update && \
 	apt-get -y --no-install-recommends install software-properties-common handbrake-cli && \
 	add-apt-repository ppa:jonathonf/ffmpeg-3 && \
-	apt-get -y --no-install-recommends install ffmpeg libav-tools x264 x265 &&\
+	apt-get -y --no-install-recommends install ffmpeg libav-tools x264 x265 lsdvd &&\
 	apt-get clean
 
 WORKDIR /data
