@@ -15,6 +15,8 @@ RUN	apt-get update && \
 	apt autoremove -y && \
 	rm -rf /var/lib/apt/lists/*
 
+RUN	ln -s /usr/bin/python3 /usr/bin/python
+
 WORKDIR /data
 VOLUME ["/data"]
 
