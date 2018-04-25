@@ -11,7 +11,8 @@ RUN	add-apt-repository ppa:jonathonf/ffmpeg-3 && \
 	add-apt-repository ppa:jonathonf/python-3.6
 
 RUN	apt-get update && \
-	apt-get -y --no-install-recommends install python3.6 handbrake-cli ffmpeg libav-tools x264 x265 lsdvd python3-dev python3-pip wget curl && \
+	apt-get -y --no-install-recommends install python3.6 handbrake-cli ffmpeg libav-tools x264 x265 lsdvd python3-dev python3-pip wget curl libdvdread-dev libdvdcss-dev && \
+	dpkg-reconfigure libdvd-pkg && \
 	apt autoremove -y && \
 	rm -rf /var/lib/apt/lists/*
 
