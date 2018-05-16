@@ -17,6 +17,7 @@ RUN	apt-get update && \
 	rm -rf /var/lib/apt/lists/*
 
 RUN	ln -s /usr/bin/python3 /usr/bin/python
+RUN	pip3 install lxml
 
 WORKDIR /data
 VOLUME ["/data"]
