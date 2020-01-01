@@ -11,6 +11,7 @@ RUN apt-get update -qq && apt-get upgrade -y && \
     bash \
     lsdvd \
     locales \
+    python3 \
     && apt-get -y clean && rm -r /var/lib/apt/lists/*
 
 ENV TZ=Asia/Toyko
