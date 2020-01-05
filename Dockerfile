@@ -12,6 +12,8 @@ RUN apt-get update -qq && apt-get upgrade -y && \
     lsdvd \
     locales \
     python3 \
+    python3-pip \
+    libxml2-utils \
     && apt-get -y clean && rm -r /var/lib/apt/lists/*
 
 ENV TZ=Asia/Toyko
@@ -29,6 +31,8 @@ ENV PKG_CONFIG_PATH="/opt/ffmpeg/lib/pkgconfig"
 RUN echo "ja_JP UTF-8" > /etc/locale.gen && locale-gen
 
 ENV LANG=ja_JP.UTF-8
+
+RUN pip3 install lxml
 
 VOLUME	/data
 WORKDIR	/data
